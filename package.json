@@ -1,0 +1,29 @@
+{
+  "name": "openapi-nuxt-example",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run generate:types && nuxt dev",
+    "build": "npm run generate:types && nuxt build",
+    "start": "nuxt start",
+    "lint:js": "eslint --ext \".js,.ts,.vue\" .",
+    "lint": "npm run lint:js",
+    "lint:fix": "npm run lint:js -- --fix",
+    "generate:types": "openapi-typescript https://petstore3.swagger.io/api/v3/openapi.json --output ./src/types/api/endpoints.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "prettier": "^2.8.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "openapi-typescript": "^6.1.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "pinia": "^2.0.30",
+    "nuxt": "^3.1.2",
+    "vue": "^3.2.47",
+    "openapi-typescript-fetch": "^1.1.3"
+  }
+}
